@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Page des potins</title>
+</head>
+<body>
+  <h1>Liste des potins</h1>
+  
+  <ul>
+    <% Gossip.all.each_with_index do |gossip, index| %>
+      <li>
+        <a href="/gossips/<%= gossip.id %>/">Potin n°<%= gossip.id %></a>
+        - <%= gossip.author %>
+      </li>
+    <% end %>
+  </ul>
+
+  <a href="/gossips/new/">Ajouter un nouveau potin</a>
+</body>
+</html>
+
+
